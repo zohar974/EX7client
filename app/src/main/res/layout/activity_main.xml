@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.madaim.ex7client.MainActivity">
 
+
     <TextView
+        android:id="@+id/IntroText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/intro"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/IntroText"
+        android:layout_marginEnd="47dp"
+        android:layout_marginTop="45dp"
+        android:onClick="HelloToast"
+        android:text="@string/call" />
+
+    <Button
+        android:id="@+id/surfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/callButton"
+        android:layout_below="@+id/callButton"
+        android:layout_marginTop="45dp"
+        android:onClick="HelloToast"
+        android:text="@string/surf" />
+
+    <Button
+        android:id="@+id/eMailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/surfButton"
+        android:layout_below="@+id/surfButton"
+        android:layout_marginTop="45dp"
+        android:onClick="HelloToast"
+        android:text="@string/eMail" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/eMailButton"
+        android:layout_below="@+id/eMailButton"
+        android:layout_marginTop="45dp"
+        android:onClick="HelloToast"
+        android:text="@string/register" />
+
+    <EditText
+        android:id="@+id/plain_text_input_call"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_alignBaseline="@+id/callButton"
+        android:layout_alignBottom="@+id/callButton"
+        android:layout_toStartOf="@+id/callButton" />
+
+    <EditText
+        android:id="@+id/plain_text_input_surf"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_alignBaseline="@+id/surfButton"
+        android:layout_alignBottom="@+id/surfButton"
+        android:layout_alignStart="@+id/IntroText"
+        android:layout_toStartOf="@+id/surfButton" />
+
+    <EditText
+        android:id="@+id/plain_text_input_eMail"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_alignBaseline="@+id/eMailButton"
+        android:layout_alignBottom="@+id/eMailButton"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/eMailButton" />
+
+    <EditText
+        android:id="@+id/plain_text_input_register"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_alignBaseline="@+id/registerButton"
+        android:layout_alignBottom="@+id/registerButton"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/registerButton" />
+
+</RelativeLayout>
